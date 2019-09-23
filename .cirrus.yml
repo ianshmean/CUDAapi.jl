@@ -5,9 +5,9 @@ task:
   env:
     matrix:
       - JULIA_VERSION: 1.3
-        CUDA: nill
+        CUDA: nil
       - JULIA_VERSION: nightly
-        CUDA: nill
+        CUDA: nil
       - JULIA_VERSION: 1.3
         CUDA: 8.0
       - JULIA_VERSION: nightly

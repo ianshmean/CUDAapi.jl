@@ -1,6 +1,6 @@
 #!/bin/bash -uxe
 
-if [$CUDA != "nill"]; then
+if [$CUDA != "nil"]; then
 
     brew update
 

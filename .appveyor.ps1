@@ -1,4 +1,4 @@
-if ($env:cuda_version != "nill") {
+if ($env:cuda_version -ne "nil") {
     $ErrorActionPreference = "Stop"
 
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12

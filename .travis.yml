@@ -18,7 +18,7 @@ env:
 matrix:
   include:
     # linux builds
-    - env: CUDA=nill
+    - env: CUDA=nil
       os: linux
       dist: xenial
     - env: CUDA=8.0
@@ -40,7 +40,7 @@ matrix:
       os: linux
       dist: xenial
     # osx builds
-    - env: CUDA=nill
+    - env: CUDA=nil
       os: osx
       osx_image: xcode7.3
     - env: CUDA=7.5
