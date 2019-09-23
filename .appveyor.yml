@@ -2,13 +2,26 @@ environment:
   JULIA_DEBUG: CUDAapi
   matrix:
   # Julia versions
-  - julia_version: 0.7
-    cuda_version: 8.0
+    # No CUDA
   - julia_version: 1.0
+    cuda_version: nill
+  - julia_version: 1.2
+    cuda_version: nill
+  - julia_version: 1.3
+    cuda_version: nill
+  - julia_version: latest
+    cuda_version: nill
+    # CUDA 8.0
+  - julia_version: 1.0
+    cuda_version: 8.0
+  - julia_version: 1.2
+    cuda_version: 8.0
+  - julia_version: 1.3
     cuda_version: 8.0
   - julia_version: latest
     cuda_version: 8.0
-  # CUDA versions
+
+  # CUDA versions on 1.0
   - julia_version: 1.0
     cuda_version: 9.0
   - julia_version: 1.0
@@ -19,6 +32,17 @@ environment:
     cuda_version: 10.0
   - julia_version: 1.0
     cuda_version: 10.1
+  # CUDA versions on latest
+  - julia_version: latest
+    cuda_version: 9.0
+  - julia_version: latest
+    cuda_version: 9.1
+  - julia_version: latest
+    cuda_version: 9.2
+  - julia_version: latest
+    cuda_version: 10.0
+  - julia_version: latest
+    cuda_version: 10.1
 
 platform:
   - x64
@@ -27,6 +51,16 @@ matrix:
  allow_failures:
   - julia_version: latest
     cuda_version: 8.0
+  - julia_version: latest
+    cuda_version: 9.0
+  - julia_version: latest
+    cuda_version: 9.1
+  - julia_version: latest
+    cuda_version: 9.2
+  - julia_version: latest
+    cuda_version: 10.0
+  - julia_version: latest
+    cuda_version: 10.1
 
 notifications:
   - provider: Email
